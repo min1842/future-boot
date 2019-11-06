@@ -1,0 +1,7 @@
+server:
+  port: 8090
+spring:  application:    name: future-boot
+future:  datasource:    primary:
+      enable: true
+      db-type: mysql
+      url: jdbc
