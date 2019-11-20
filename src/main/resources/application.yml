@@ -4,4 +4,14 @@ spring:  application:    name: future-boot
 future:  datasource:    primary:
       enable: true
       db-type: mysql
-      url: jdbc
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/dream
+      username: root
+      password: zhe1842
+      initial-size: 1
+      min-idle: 1
+      max-active: 10
+      config:
+        map-underscore-to-camel-case: true
+      mapper-locations:
+      - classpath:**/mapper/${future.datasource.primary.db-type}/*Mapper.xml

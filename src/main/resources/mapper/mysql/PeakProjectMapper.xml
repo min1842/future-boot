@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.dream.service.webflux.mapper.mysql.PeakProjectMapper">
+
+	<select id="queryProjects"
+		resultType="com.future.boot.model.PeakProjectModel">
+		SELECT
+			id,
+			project_title,
+			project_area,
+			project_type,
+			project_start,
+			project_end,
+			project_description,
+			create_by,
+			create_tm 
+		FROM
+			tt_peak_project	
+	</select>
+
+	<insert id="createProject"
+		parameterType="com.future.boot.model.PeakProjectModel">
+		INSERT INTO tt_peak_project ( project_title, project_area, project_type, project_start, project_end, project_description, create_by, create_tm )
+		VALUES
+		(
+			#{projectTitle},
+			#{projectArea},
+			#{projectType},
+			#{projectStart},
+			#{projectEnd},
+			#{projectDescription},
+			#{createBy},
+			sysdate()
+		)
+	</insert>
+</mapper>
