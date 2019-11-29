@@ -52,6 +52,12 @@
 			<artifactId>future-orm-spring-boot-starter</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>com.future.basic</groupId>
+			<artifactId>future-basic</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>

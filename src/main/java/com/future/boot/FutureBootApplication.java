@@ -3,6 +3,9 @@ package com.future.boot;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.future.basic.framework.configuration.EnableFutureBasic;
+
+@EnableFutureBasic
 @SpringBootApplication
 public class FutureBootApplication {
 

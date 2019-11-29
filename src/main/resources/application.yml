@@ -13,5 +13,3 @@ future:  datasource:    primary:
       max-active: 10
       config:
         map-underscore-to-camel-case: true
-      mapper-locations:
-      - classpath:**/mapper/${future.datasource.primary.db-type}/*Mapper.xml
